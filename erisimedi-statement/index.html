@@ -83,6 +83,29 @@ ol.steps li::before{content:counter(s);font-family:var(--serif);font-weight:700;
   .fact strong{font-size:30px}
 }
 @media (max-width:420px){.pair{grid-template-columns:1fr}.grid,.grid.two{grid-template-columns:1fr}.grid .hide-sm{display:block}}
+/* --- სახლების ზოლი --- */
+html,body{overflow-x:clip}
+.houses{margin:56px 0 8px;display:grid;gap:14px}
+.houses h2{margin:0}
+.houses-sub{margin:0;color:var(--muted);font-size:15px}
+.strip{width:min(1040px,calc(100vw - 32px));margin-left:calc(50% - min(520px,50vw - 16px));overflow:hidden}
+.strip-track{--gap:10px;display:flex;width:max-content;animation:strip 55s linear infinite}
+.strip:hover .strip-track,.strip:focus-within .strip-track{animation-play-state:paused}
+.strip figure{margin:0 var(--gap) 0 0;flex:none;width:calc((min(1040px,100vw - 32px) - 2 * var(--gap)) / 3)}
+@media (max-width:900px){.strip figure{width:calc((100vw - 32px) / 2.1)}}
+@keyframes strip{to{transform:translateX(-50%)}}
+@media (max-width:640px){.strip figure{width:calc((100vw - 32px) / 1.25)}.strip-track{animation-duration:40s}}
+@media (prefers-reduced-motion:reduce){.strip{overflow-x:auto}.strip-track{animation:none}.strip .dup{display:none}}
+/* --- დიდი ფოტო: ღილაკები --- */
+.lb-btn{position:absolute;border:0;background:rgba(255,255,255,.14);color:#fff;width:48px;height:48px;border-radius:50%;font-size:28px;line-height:1;cursor:pointer;display:flex;align-items:center;justify-content:center}
+.lb-btn:hover{background:rgba(255,255,255,.28)}
+.lb-btn:focus-visible{outline:3px solid #9cbc8a;outline-offset:2px}
+.lb-close{top:max(14px,env(safe-area-inset-top,0px));right:max(14px,env(safe-area-inset-right,0px));font-size:24px}
+.lb-prev{left:max(14px,env(safe-area-inset-left,0px));top:50%;transform:translateY(-50%)}
+.lb-next{right:max(14px,env(safe-area-inset-right,0px));top:50%;transform:translateY(-50%)}
+.lb-count{position:absolute;bottom:max(14px,env(safe-area-inset-bottom,0px));left:0;right:0;text-align:center;color:#d6dbd2;font-size:13px}
+.lb img{cursor:default}
+.lb{padding-bottom:max(44px,env(safe-area-inset-bottom,0px))}
 </style>
 </head>
 <body>
@@ -192,17 +215,61 @@ ol.steps li::before{content:counter(s);font-family:var(--serif);font-weight:700;
     <p>სწორედ ასეთი თანმიმდევრული და სისტემური მიდგომა შეუწყობს ხელს კულტურული მემკვიდრეობის ძეგლების გრძელვადიან შენარჩუნებას და თავიდან აგვარიდებს მომავალში განმეორებითი, მასშტაბური და რთული სარესტავრაციო ჩარევების აუცილებლობას.</p>
     <p>დასასრულს, გვსურს, გულწრფელი მოკითხვა და პატივისცემა გამოვხატოთ აბასთუმნის თითოეული მაცხოვრებლის მიმართ, ვინც ცხოვრობდა და დღემდე ცხოვრობს რეაბილიტირებულ ისტორიულ შენობებში.</p>
     <p>ჩვენ პირადად გვქონდა ურთიერთობა თითოეულ მათგანთან, რასაც დღემდე განსაკუთრებულად ვაფასებთ და გულწრფელ მადლობას ვუხდით მათ ჩვენს მიმართ გამოჩენილი მიმღებლობისა და დამოკიდებულებისათვის.</p>
+
+<section class="houses">
+  <h2>რესტავრირებული სახლები აბასთუმანში</h2>
+  <p class="houses-sub">ჩვენი კომპანიის მიერ აღდგენილი ისტორიული შენობები.</p>
+  <div class="strip">
+    <div class="strip-track">
+      <figure><img class="ph" tabindex="0" src="houses/h-1ac43f6b.jpg" alt="ორსართულიანი სახლი ჩუქურთმიანი აივნებით"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-01bafb7e.jpg" alt="მწვანე-ყვითელი აივნიანი სახლი"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-778b5609.jpg" alt="მწვანე შემინული აივნები და ქვის კედელი"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-689da6a1.jpg" alt="ღია ფერის სახლი ჩუქურთმიანი ვერანდით"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-354f63e6.jpg" alt="ქვის სახლი ვერანდით და ბალუსტრადით"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-461b8571.jpg" alt="შემინული ვერანდიანი ერთსართულიანი სახლი"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-50d5d89d.jpg" alt="მწვანე პავილიონი ვერანდით"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-cee1134e.jpg" alt="ცისფერი სახლი რკინის კიბით"></figure>
+      <figure><img class="ph" tabindex="0" src="houses/h-023a6821.jpg" alt="ორსართულიანი სახლი აივნით"></figure>
+      <!-- იგივე ფოტოები მეორედ, რომ ზოლი უწყვეტად მოძრაობდეს -->
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-1ac43f6b.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-01bafb7e.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-778b5609.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-689da6a1.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-354f63e6.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-461b8571.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-50d5d89d.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-cee1134e.jpg" alt=""></figure>
+      <figure class="dup" aria-hidden="true"><img class="ph" src="houses/h-023a6821.jpg" alt=""></figure>
+    </div>
+  </div>
+</section>
+
     <div class="sign">სს „ერისიმედი“</div>
   </article>
 </div>
 
-<div class="lb" id="lb" hidden><img id="lbimg" alt=""></div>
+<div class="lb" id="lb" hidden>
+  <button class="lb-btn lb-close" type="button" aria-label="დახურვა">✕</button>
+  <button class="lb-btn lb-prev" type="button" aria-label="წინა ფოტო">‹</button>
+  <img id="lbimg" alt="">
+  <button class="lb-btn lb-next" type="button" aria-label="შემდეგი ფოტო">›</button>
+  <div class="lb-count" id="lbcount"></div>
+</div>
 <script>
-const lb=document.getElementById('lb'),li=document.getElementById('lbimg');
-function open(img){li.src=img.src;li.alt=img.alt;lb.hidden=false}
-document.querySelectorAll('.ph').forEach(i=>{i.addEventListener('click',()=>open(i));i.addEventListener('keydown',e=>{if(e.key==='Enter')open(i)})});
-lb.addEventListener('click',()=>{lb.hidden=true});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
+const lb=document.getElementById('lb'),li=document.getElementById('lbimg'),lc=document.getElementById('lbcount');
+const allPics=[...document.querySelectorAll('.ph')].filter(i=>!i.closest('.dup')&&!i.closest('.strip'));
+const housePics=[...document.querySelectorAll('.strip .ph')].filter(i=>!i.closest('.dup'));
+let pics=allPics,cur=0;
+function show(k){cur=(k+pics.length)%pics.length;const p=pics[cur];li.src=p.src;li.alt=p.alt;lc.textContent=(cur+1)+' / '+pics.length}
+function openPic(img){pics=img.closest('.strip')?housePics:allPics;const src=img.getAttribute('src');let k=pics.findIndex(p=>p.getAttribute('src')===src);show(k<0?0:k);lb.hidden=false;document.body.style.overflow='hidden'}
+function closePic(){lb.hidden=true;document.body.style.overflow=''}
+document.querySelectorAll('.ph').forEach(i=>{i.addEventListener('click',()=>openPic(i));i.addEventListener('keydown',e=>{if(e.key==='Enter')openPic(i)})});
+lb.addEventListener('click',e=>{if(e.target===lb||e.target.classList.contains('lb-close'))closePic()});
+lb.querySelector('.lb-prev').addEventListener('click',()=>show(cur-1));
+lb.querySelector('.lb-next').addEventListener('click',()=>show(cur+1));
+document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')closePic();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+let x0=null;lb.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
+lb.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));x0=null});
 </script>
 </body>
 </html>
