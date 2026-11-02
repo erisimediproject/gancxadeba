@@ -1,0 +1,198 @@
+<!doctype html>
+<html lang="ka">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>სს „ერისიმედი“ — საჯარო განცხადება</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Serif+Georgian:wght@500;700&family=Noto+Sans+Georgian:wght@400;500;600&display=swap">
+<style>
+/* Layout: single reading column (~66ch) with photos breaking wider; palette taken from Abastumani verandas: veranda green, balustrade yellow, plaster grey */
+:root{
+  --bg:#f6f7f3; --surface:#ffffff; --fg:#1f2620; --muted:#5d6a5f; --line:#d9ddd3;
+  --green:#4f6b43; --green-soft:#e4ebdc; --yellow:#e9dc9a;
+  --serif:"Noto Serif Georgian","Sylfaen",Georgia,serif;
+  --sans:"Noto Sans Georgian","Sylfaen",system-ui,sans-serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#151915; --surface:#1d231d; --fg:#e7ebe3; --muted:#a3ae9f; --line:#323a31;
+  --green:#9cbc8a; --green-soft:#253024; --yellow:#cdbf73; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#151915; --surface:#1d231d; --fg:#e7ebe3; --muted:#a3ae9f; --line:#323a31;
+  --green:#9cbc8a; --green-soft:#253024; --yellow:#cdbf73; color-scheme:dark}
+*{box-sizing:border-box}
+img{max-width:100%}
+[hidden]{display:none!important}
+body{margin:0;background:var(--bg);color:var(--fg);font-family:var(--sans);font-size:17px;line-height:1.75;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.wrap{max-width:1040px;margin:0 auto;padding-block:40px 64px}
+.col{max-width:680px;margin:0 auto}
+header{display:grid;gap:14px;padding-block:8px 32px;border-bottom:1px solid var(--line)}
+.kicker{font-size:13px;font-weight:600;letter-spacing:.06em;color:var(--green);display:flex;gap:10px;align-items:center;flex-wrap:wrap}
+.kicker span+span::before{content:"·";margin-right:10px;color:var(--muted)}
+h1{font-family:var(--serif);font-weight:700;font-size:clamp(26px,4.4vw,42px);line-height:1.3;margin:0;text-wrap:balance}
+.place{color:var(--muted);font-size:15px;margin:0}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-block:36px 12px}
+.pair figure{margin:0;display:grid;gap:8px}
+.tag{font-size:12.5px;font-weight:600;letter-spacing:.05em;color:var(--muted)}
+.tag b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px;vertical-align:1px}
+.ph{width:100%;max-width:100%;aspect-ratio:4/3;object-fit:cover;display:block;border-radius:3px;cursor:zoom-in;background:var(--line)}
+.facts{display:flex;gap:0;margin-block:28px 8px;border-block:1px solid var(--line)}
+.fact{flex:1;padding:18px 16px;display:grid;gap:2px}
+.fact+.fact{border-left:1px solid var(--line)}
+.fact strong{font-family:var(--serif);font-size:36px;line-height:1.1;color:var(--green);font-variant-numeric:tabular-nums}
+.fact span{font-size:14px;color:var(--muted);line-height:1.45}
+article p{margin:0 0 1.1em}
+article .lead{font-size:18.5px}
+h2{font-family:var(--serif);font-weight:700;font-size:23px;line-height:1.4;margin:2.2em 0 .8em;text-wrap:balance}
+.stage{display:grid;gap:12px;margin-block:28px 40px}
+.stage-head{display:flex;align-items:baseline;gap:12px;border-top:2px solid var(--green);padding-top:10px}
+.stage-head .n{font-family:var(--serif);font-weight:700;color:var(--green);font-size:15px}
+.stage-head h3{margin:0;font-size:16px;font-weight:600}
+.grid{display:grid;gap:10px;grid-template-columns:repeat(3,1fr)}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.grid figure{margin:0}
+.wide{max-width:1040px;margin-inline:auto}
+.cmp{display:grid;gap:12px}
+.cmp .pair{margin:0}
+.legend{display:flex;gap:18px;font-size:13px;color:var(--muted)}
+.legend b{display:inline-block;width:9px;height:9px;border-radius:50%;margin-right:7px}
+.stage-head h3{text-wrap:balance}
+ol.steps{list-style:none;padding:0;margin:1.2em 0 1.6em;display:grid;gap:14px;counter-reset:s}
+ol.steps li{counter-increment:s;display:grid;grid-template-columns:44px 1fr;gap:12px;align-items:start;padding:14px 16px;background:var(--green-soft);border-radius:4px}
+ol.steps li::before{content:counter(s);font-family:var(--serif);font-weight:700;font-size:22px;color:var(--green);line-height:1.3}
+.sign{margin-top:2.4em;padding-top:18px;border-top:1px solid var(--line);font-family:var(--serif);font-weight:700;font-size:19px}
+.note{font-size:13.5px;color:var(--muted);margin-top:6px}
+.lb{position:fixed;inset:0;background:rgba(10,12,10,.92);display:flex;align-items:center;justify-content:center;z-index:50;padding:max(16px,env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) max(16px,env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px));cursor:zoom-out}
+.lb img{max-width:100%;max-height:100%;object-fit:contain;border-radius:3px}
+.ph:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+@media (max-width:640px){
+  body{font-size:16px}
+  .grid{grid-template-columns:1fr 1fr}
+  .grid .hide-sm{display:none}
+  .fact strong{font-size:30px}
+}
+@media (max-width:420px){.pair{grid-template-columns:1fr}.grid,.grid.two{grid-template-columns:1fr}.grid .hide-sm{display:block}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="col">
+    <div class="kicker"><span>სს „ერისიმედი“</span><span>საჯარო განცხადება</span></div>
+    <h1>აბასთუმანში ისტორიული შენობების სარეაბილიტაციო-სარესტავრაციო სამუშაოებთან დაკავშირებით</h1>
+    <p class="place">კურორტი აბასთუმანი, რუსთაველის ქუჩა</p>
+  </header>
+
+  <div class="pair wide">
+    <figure><div class="tag"><b style="background:var(--muted)"></b>სამუშაოებამდე</div><img class="ph" tabindex="0" src="p/f912144f.jpg" alt="ისტორიული შენობა სამუშაოების დაწყებამდე: ჩამოშლილი ბათქაში, დამტვრეული მინები"></figure>
+    <figure><div class="tag"><b style="background:var(--green)"></b>სამუშაოების შემდეგ</div><img class="ph" tabindex="0" src="p/8992ed47.jpg" alt="იგივე შენობა სამუშაოების დასრულების შემდეგ"></figure>
+  </div>
+
+  <div class="col">
+    <div class="facts">
+      <div class="fact"><strong>22</strong><span>ისტორიული შენობა რუსთაველის ქუჩაზე</span></div>
+      <div class="fact"><strong>20</strong><span>მათგან კულტურული მემკვიდრეობის ძეგლია</span></div>
+    </div>
+  </div>
+
+  <article class="col">
+    <p class="lead" style="margin-top:28px">ძალიან სამწუხაროა, როდესაც ჟურნალისტები და პოლიტიკოსები საკუთარი პოლიტიკური მიზნების მისაღწევად ადამიანების გულისტკივილს იყენებენ, სიმართლესა და სიცრუეს ერთმანეთში ისე ურევენ, რომ ფართო საზოგადოებას მოვლენების ობიექტურად შეფასების შესაძლებლობას უკარგავენ. ნაცვლად ამისა, აუცილებელია საკითხის ყოველგვარი პოლიტიკური გავლენისგან გამიჯვნა და არსებული რეალური ვითარების პროფესიული შეფასება დარგის სპეციალისტების მიერ, ყველა დაინტერესებული მხარის ჩართულობით, მათი პოზიციებისა და შესაბამისი დასაბუთებების საფუძველზე.</p>
+    <p>ჩვენ ნამდვილად არ გამოვეხმაურებოდით საჯაროდ აღნიშნულ საკითხს, რომ არა ისეთი მნიშვნელოვანი სოციალური პრობლემებით მანიპულირების მცდელობა, რომლის მომსწრენიც გასულ შაბათს გასულ სატელევიზიო სიუჟეტში გავხდით. აღნიშნულ სიუჟეტში უსაფუძვლოდ ხდება იმ ადამიანებისა და კომპანიების რეპუტაციის შელახვა, რომლებიც მრავალი წელია პროფესიულ საქმიანობას სამშენებლო სფეროში ახორციელებენ, გასული საუკუნის 90-იანი წლებიდან დღემდე უწყვეტად ფუნქციონირებენ და არ ჩაუგდიათ არცერთი პროექტი ან ვალდებულება, რომელიც მათ სახელმწიფო თუ კერძო დაკვეთების ფარგლებში ჰქონდათ აღებული.</p>
+    <p>ნიშანდობლივია, რომ სს „ერისიმედის“ სახელწოდების ისტორია საქართველოს პირველ პრეზიდენტს, ბატონ ზვიად გამსახურდიას უკავშირდება. სწორედ მან უწოდა ორგანიზაციას „ერისიმედი“ იმ სამუშაოების საპატივცემულოდ, რომლებიც კომპანიამ აზერბაიჯანის საზღვართან მდებარე სოფელ ერისიმედში განახორციელა. აღსანიშნავია, რომ აღნიშნულ სოფელსაც ეს სახელწოდება თავად ზვიად გამსახურდიამ მიანიჭა.</p>
+    <p>ჩვენი კომპანიის საქმიანობის მიზანი მხოლოდ ფინანსური სარგებლის მიღება არ არის. კომპანიაში მრავალი წელია ასეულობით ადამიანია დასაქმებული. თავისი არსებობის განმავლობაში კომპანიამ არაერთი რთული პერიოდი გამოიარა და მრავალი გამოწვევა გადალახა. სწორედ ამ ადამიანების წინაშე არსებული პასუხისმგებლობა გვავალდებულებს, უპასუხოდ არ დავტოვოთ ჩვენი კომპანიის მიმართ გავრცელებული ცილისმწამებლური განცხადებები, მიუხედავად იმისა, რომ არანაირი სურვილი არ გვაქვს, ჩავერთოთ პოლიტიკურ ავანტიურაში.</p>
+
+    <h2>რა განახორციელა კომპანიამ აბასთუმანში</h2>
+    <p>გვსურს, ფართო საზოგადოებას განვუმარტოთ, რომ ჩვენმა კომპანიამ კურორტ აბასთუმანში განახორციელა თავისი შინაარსითა და სპეციფიკით უაღრესად რთული პროექტი, რომელიც ითვალისწინებდა რუსთაველის ქუჩაზე მდებარე 22 და არა 17 ისტორიული შენობის სარეაბილიტაციო-სარესტავრაციო სამუშაოებს. აღნიშნული 22 შენობიდან 20 კულტურული მემკვიდრეობის ძეგლის სტატუსს ატარებს.</p>
+    <p>დარგის სპეციალისტებისთვის კარგად არის ცნობილი, რომ კულტურული მემკვიდრეობის ძეგლებზე სამუშაოების განხორციელება არსებითად განსხვავდება ჩვეულებრივი სამშენებლო პროცესისგან. ამგვარი სამუშაოები მოითხოვს განსაკუთრებულ, კვლევებზე დაფუძნებულ მეთოდოლოგიურ მიდგომებს, რომლებიც ძეგლის საუკეთესო ინტერესების გათვალისწინებით, მისი კონსტრუქციული და არქიტექტურული ელემენტების გახსნისთანავე, თანმიმდევრული და კომპლექსური კვლევების ჩატარებასა და სამუშაოების განსაკუთრებული სიფრთხილით წარმოებას გულისხმობს.</p>
+    <p>აბასთუმნის ისტორიული სახლების შემთხვევაში ამ ისედაც რთულ საპროექტო ამოცანას დამატებით ართულებდა მეტად მძიმე სოციალური გარემოებები.</p>
+    <p>როგორც უკვე აღვნიშნეთ, თითოეულ შენობაში რამდენიმე ოჯახი ცხოვრობს, რომლებმაც წლების განმავლობაში, საკუთარი ბუნებრივი საყოფაცხოვრებო საჭიროებებიდან გამომდინარე, საცხოვრებელი ფართები შესაბამისი პირობებით მოაწყვეს. აღნიშნულმა გარემოებებმა მნიშვნელოვნად შეცვალა და დააზიანა კულტურული მემკვიდრეობის ძეგლების თავდაპირველი ისტორიულ-არქიტექტურული იერსახე.</p>
+    <p>ცალკეულ შემთხვევებში მოწყობილი იყო თვითნებური, არქიტექტურულად შეუსაბამო მინაშენები, ზოგიერთ შენობაში აივნებზე განთავსებული იყო სანიტარიული კვანძები. ამასთან, ძეგლებზე განხორციელებული იყო სხვადასხვა სახის უხეში და კომპლექსური ჩარევები, რომლებმაც გამოიწვია როგორც შენობების ისტორიულ-არქიტექტურული იერსახის მნიშვნელოვანი ცვლილება, ისე მათი კონსტრუქციული ელემენტების დაზიანება.</p>
+    <p>თავდაპირველი საპროექტო დოკუმენტაციით სარეაბილიტაციო შენობებზე გათვალისწინებული იყო მხოლოდ სახურავების შეცვლა და ექსტერიერის სარეაბილიტაციო სამუშაოების განხორციელება. პროექტი არ ითვალისწინებდა ინტერიერში სამუშაოების წარმოებას და სრულყოფილად ვერ ასახავდა შენობების ფაქტობრივ ტექნიკურ მდგომარეობას, აგრეთვე იმ სოციალურ საჭიროებებსა და მოთხოვნებს, რომლებიც საცხოვრებელი ფართების მესაკუთრეების მხრიდან არსებობდა.</p>
+    <p>მიუხედავად აღნიშნული ობიექტური გარემოებებით გამოწვეული სირთულეებისა, ჩვენი კომპანიის, დამკვეთის წარმომადგენლებისა და თავად შენობების მესაკუთრეების გონივრული და კონსტრუქციული მიდგომების შედეგად, ვფიქრობთ, ერთობლივი ძალისხმევით შევძელით დასახული საპროექტო ამოცანის განხორციელება.</p>
+    <p>აღნიშნული, უპირველეს ყოვლისა, გამოიხატა სარესტავრაციო შენობების ავთენტური ისტორიულ-არქიტექტურული იერსახის მაქსიმალურად აღდგენაში, იმგვარად, რომ გათვალისწინებული ყოფილიყო პროცესში მონაწილე ყველა დაინტერესებული მხარის, მათ შორის ადგილობრივი მაცხოვრებლების, ინტერესები.</p>
+
+    <h2>მაგალითი: რუსთაველის ქუჩა №76</h2>
+    <p>ჩვენი განცხადების საილუსტრაციოდ გვსურს, საზოგადოებას წარვუდგინოთ რუსთაველის ქუჩის №76-ში მდებარე შენობასთან დაკავშირებული, საჯაროდ ხელმისაწვდომი საპროექტო დოკუმენტაცია, რომელიც აღნიშნულ ობიექტზე განსახორციელებელ სამუშაოებს ითვალისწინებდა.</p>
+    <p>ამასთანავე, წარმოვადგენთ შენობის სარეაბილიტაციო-სარესტავრაციო სამუშაოების დაწყებამდე, მისი კონსტრუქციული და არქიტექტურული ელემენტების გახსნამდე არსებული მდგომარეობის ამსახველ ფოტომასალას.</p>
+  </article>
+
+    <section class="stage wide">
+    <div class="stage-head"><span class="n">1</span><h3>მდგომარეობა სამუშაოების დაწყებამდე</h3></div>
+    <div class="grid two">
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/f912144f.jpg" alt="შენობა სამუშაოებამდე: ჩამოშლილი ბათქაში, დამტვრეული მინები"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/7d9e9ac9.jpg" alt="კუთხის შენობა სამუშაოებამდე: დაზიანებული ვერანდა და აივანი"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/6c8c2251.jpg" alt="შენობა სამუშაოებამდე: ჩამოცვენილი ბათქაში, თვითნებური მინაშენი"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/e8f1219d.jpg" alt="ეზოს მხარე სამუშაოებამდე: დაზიანებული კიბე და აივანი"></figure>
+    </div>
+  </section>
+  <article class="col">
+    <p>ასევე წარმოვადგენთ უშუალოდ სარეაბილიტაციო-სარესტავრაციო სამუშაოების მიმდინარეობის ამსახველ ფოტომასალას, რომელშიც თვალნათლივ ჩანს, რა სამშენებლო და სარესტავრაციო მასალები იქნა გამოყენებული და როგორ მიმდინარეობდა სამუშაო პროცესი.</p>
+  </article>
+  <section class="stage wide">
+    <div class="stage-head"><span class="n">2</span><h3>სამუშაოების მიმდინარეობა: ფასადები</h3></div>
+    <div class="grid">
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/7e38578b.jpg" alt="ფასადი ხარაჩოებით, ახალი ხის კონსტრუქციები"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/9cf2302c.jpg" alt="მუშები ობიექტზე, შემინული აივნების აღდგენა"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/d81429b6.jpg" alt="ახალი ხის ვერანდა და აივანი, სამუშაოების ხარჯთაღრიცხვით ხელში"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/fba53fad.jpg" alt="ახალი ხის ვერანდა და აივანი შეღებვამდე"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/1a1e20b3.jpg" alt="ვერანდის ხის კარკასი და მოპირკეთება"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/9169becc.jpg" alt="აღდგენილი ვერანდის ჩარჩოები ხარაჩოებს შორის"></figure>
+    </div>
+  </section>
+  <section class="stage wide">
+    <div class="stage-head"><span class="n">3</span><h3>სამუშაოების მიმდინარეობა: ვერანდების შიდა მხარე</h3></div>
+    <div class="grid">
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/77f2bc49.jpg" alt="შემინული ვერანდა შიგნიდან: ხის ჭერი, ტენგამძლე თაბაშირმუყაო"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/f178bd67.jpg" alt="ვერანდის კედლის თბოიზოლაცია მინერალური ბამბით"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/a8700a86.jpg" alt="ტიხრის ხის კარკასი ვერანდაზე"></figure>
+    </div>
+  </section>
+  <article class="col">
+    <p>დაბოლოს, საზოგადოებას ვთავაზობთ ჩვენი კომპანიის მიერ შესრულებული სამუშაოების დასრულების შემდგომ გადაღებულ ფოტომასალას, რომელიც ასახავს შენობისა და საცხოვრებელი ფართების იმ მდგომარეობას, რომელშიც ისინი მესაკუთრეებს გადაეცათ.</p>
+  </article>
+  <section class="stage wide">
+    <div class="stage-head"><span class="n">4</span><h3>სამუშაოების დასრულების შემდეგ</h3></div>
+    <div class="grid">
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/8992ed47.jpg" alt="რესტავრირებული შენობა, ფრონტონი და შემინული აივნები"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/438be445.jpg" alt="კუთხის შენობა სამუშაოების შემდეგ"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/a039b94a.jpg" alt="ეზოს მხარე სამუშაოების შემდეგ"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/cbaed08e.jpg" alt="რესტავრირებული შენობის კუთხე"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/4291d2d7.jpg" alt="ორსართულიანი სახლი აღდგენილი აივნებით"></figure>
+      <figure><img class="ph" tabindex="0" loading="lazy" src="p/59d3e6e0.jpg" alt="აღდგენილი სახლი და ქვის ფასადი ზამთარში"></figure>
+    </div>
+  </section>
+  <section class="stage wide">
+    <div class="stage-head"><span class="n">↔</span><h3>იყო და გახდა</h3></div>
+    <div class="cmp">
+      <div class="pair"><figure><img class="ph" tabindex="0" loading="lazy" src="p/7d9e9ac9.jpg" alt="სამუშაოებამდე"></figure><figure><img class="ph" tabindex="0" loading="lazy" src="p/438be445.jpg" alt="სამუშაოების შემდეგ"></figure></div>
+      <div class="pair"><figure><img class="ph" tabindex="0" loading="lazy" src="p/e8f1219d.jpg" alt="სამუშაოებამდე"></figure><figure><img class="ph" tabindex="0" loading="lazy" src="p/a039b94a.jpg" alt="სამუშაოების შემდეგ"></figure></div>
+    </div>
+    <div class="legend"><span><b style="background:var(--muted)"></b>სამუშაოებამდე</span><span><b style="background:var(--green)"></b>სამუშაოების შემდეგ</span></div>
+  </section>
+
+<article class="col">
+    <h2>ძეგლზე ზრუნვა ერთჯერადი სამუშაოთი არ სრულდება</h2>
+    <p>დამატებით გვსურს აღვნიშნოთ, რომ კულტურული მემკვიდრეობის ძეგლზე ზრუნვა არ იწყება და არ სრულდება მხოლოდ ერთჯერადი, მასშტაბური სარესტავრაციო ჩარევით, რომელიც თავისი სირთულითა და მნიშვნელობით შეიძლება ქირურგიულ ოპერაციას შევადაროთ.</p>
+    <p>კულტურული მემკვიდრეობის ძეგლის შენარჩუნება მოითხოვს კომპლექსურ, სისტემურ და უწყვეტ მიდგომას, რომელიც რამდენიმე მნიშვნელოვან ეტაპს მოიცავს.</p>
+    <ol class="steps">
+      <li><div>პირველი და უმნიშვნელოვანესი ეტაპია კულტურული მემკვიდრეობის ძეგლის პასპორტიზაცია, რაც გულისხმობს მისი ისტორიული, არქიტექტურული, კონსტრუქციული და ტექნიკური მდგომარეობის სათანადო დოკუმენტირებას.</div></li>
+      <li><div>მეორე ეტაპია ძეგლის მუდმივი საექსპლუატაციო მონიტორინგი, რომლის შედეგებიც სისტემატურად უნდა აისახოს ძეგლის პასპორტში.</div></li>
+      <li><div>მესამე ეტაპია მონიტორინგის შედეგად გამოვლენილ დაზიანებებსა და თვითნებურ ჩარევებზე შესაბამისი სახელმწიფო ორგანოების დროული რეაგირება და მათი შედეგების დაუყოვნებლივ აღმოფხვრის უზრუნველყოფა.</div></li>
+    </ol>
+    <p>სწორედ ასეთი თანმიმდევრული და სისტემური მიდგომა შეუწყობს ხელს კულტურული მემკვიდრეობის ძეგლების გრძელვადიან შენარჩუნებას და თავიდან აგვარიდებს მომავალში განმეორებითი, მასშტაბური და რთული სარესტავრაციო ჩარევების აუცილებლობას.</p>
+    <p>დასასრულს, გვსურს, გულწრფელი მოკითხვა და პატივისცემა გამოვხატოთ აბასთუმნის თითოეული მაცხოვრებლის მიმართ, ვინც ცხოვრობდა და დღემდე ცხოვრობს რეაბილიტირებულ ისტორიულ შენობებში.</p>
+    <p>ჩვენ გვქონდა შესაძლებლობა, პირადად გვქონოდა ურთიერთობა თითოეულ მათგანთან. ამ ურთიერთობებს დღემდე განსაკუთრებულად ვაფასებთ და გულწრფელ მადლობას ვუხდით მათ ჩვენ მიმართ გამოჩენილი მიმღებლობისა და დამოკიდებულებისთვის.</p>
+    <div class="sign">სს „ერისიმედი“</div>
+  </article>
+</div>
+
+<div class="lb" id="lb" hidden><img id="lbimg" alt=""></div>
+<script>
+const lb=document.getElementById('lb'),li=document.getElementById('lbimg');
+function open(img){li.src=img.src;li.alt=img.alt;lb.hidden=false}
+document.querySelectorAll('.ph').forEach(i=>{i.addEventListener('click',()=>open(i));i.addEventListener('keydown',e=>{if(e.key==='Enter')open(i)})});
+lb.addEventListener('click',()=>{lb.hidden=true});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')lb.hidden=true});
+</script>
+</body>
+</html>
