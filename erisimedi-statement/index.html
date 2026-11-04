@@ -107,6 +107,11 @@ html,body{overflow-x:clip}
 .lb img{cursor:default}
 .lb{padding-bottom:max(44px,env(safe-area-inset-bottom,0px))}
 article a{color:var(--green);text-decoration:underline;text-underline-offset:3px}
+html{scroll-behavior:smooth}
+[id^="h6"],[id^="h7"]{scroll-margin-top:24px}
+.houses-list{margin:0 0 1.2em;padding-left:1.2em;display:grid;gap:6px}
+.house-title{font-family:var(--serif);font-weight:700;font-size:20px;margin:1.6em 0 .6em}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 </style>   
 </head>
 <body>
@@ -139,7 +144,14 @@ article a{color:var(--green);text-decoration:underline;text-underline-offset:3px
     <p>მიუხედავად აღნიშნული ობიექტური გარემოებებით გამოწვეული სირთულეებისა, ჩვენი კომპანიის, დამკვეთის წარმომადგენლებისა და თავად შენობების მესაკუთრეების გონივრული და კონსტრუქციული მიდგომების შედეგად, ვფიქრობთ, ერთობლივი ძალისხმევით შევძელით დასახული საპროექტო ამოცანის განხორციელება.</p>
     <p>აღნიშნული, უპირველეს ყოვლისა, გამოიხატა სარესტავრაციო შენობების ავთენტური ისტორიულ-არქიტექტურული იერსახის მაქსიმალურად აღდგენაში, იმგვარად, რომ გათვალისწინებული ყოფილიყო პროცესში მონაწილე ყველა დაინტერესებული მხარის, მათ შორის ადგილობრივი მაცხოვრებლების, ინტერესები.</p>
 
-    <p>ჩვენი განცხადების საილუსტრაციოდ გვსურს, საზოგადოებას წარვუდგინოთ რუსთაველის ქუჩის №76-ში მდებარე შენობასთან დაკავშირებული, საჯაროდ ხელმისაწვდომი საპროექტო დოკუმენტაცია, რომელიც აღნიშნულ ობიექტზე განსახორციელებელ სამუშაოებს ითვალისწინებდა.</p>
+    <h2>მაგალითები: რუსთაველის ქუჩა №68, №70 და №76</h2>
+    <p>ჩვენი განცხადების საილუსტრაციოდ გვსურს, საზოგადოებას წარვუდგინოთ რუსთაველის ქუჩაზე მდებარე შემდეგი შენობების ფოტომასალა:</p>
+    <ul class="houses-list">
+      <li><a href="#h68">რუსთაველის ქუჩა №68</a></li>
+      <li><a href="#h70">რუსთაველის ქუჩა №70</a></li>
+      <li><a href="#h76">რუსთაველის ქუჩა №76</a>, მათ შორის საჯაროდ ხელმისაწვდომი <a href="proekti.pdf" target="_blank">საპროექტო</a> დოკუმენტაცია, რომელიც აღნიშნულ ობიექტზე განსახორციელებელ სამუშაოებს ითვალისწინებდა.</li>
+    </ul>
+    <h3 class="house-title" id="h76">რუსთაველის ქუჩა №76</h3>
     <p>ამასთანავე, წარმოვადგენთ შენობის სარეაბილიტაციო-სარესტავრაციო სამუშაოების დაწყებამდე, მისი კონსტრუქციული და არქიტექტურული ელემენტების გახსნამდე არსებული მდგომარეობის ამსახველ ფოტომასალას.</p>
   </article>
 
@@ -197,13 +209,8 @@ article a{color:var(--green);text-decoration:underline;text-underline-offset:3px
     <div class="legend"><span><b style="background:var(--muted)"></b>სამუშაოებამდე</span><span><b style="background:var(--green)"></b>სამუშაოების შემდეგ</span></div>
   </section>
 
-  <!-- ===== სხვა მაგალითები: №68 და №70 ===== -->
-  <article class="col">
-    <h2>სხვა მაგალითები: რუსთაველის ქუჩა №68 და №70</h2>
-    <p>ქვემოთ წარმოდგენილია იმავე ქუჩაზე მდებარე კიდევ ორი შენობის ფოტომასალა: მდგომარეობა სამუშაოების დაწყებამდე და სამუშაოების დასრულების შემდეგ.</p>
-  </article>
-
-  <section class="stage wide">
+  <!-- ===== №68 და №70 ===== -->
+  <section class="stage wide" id="h68">
     <div class="stage-head"><span class="n">№68</span><h3>რუსთაველის ქუჩა №68</h3></div>
     <div class="cmp">
       <div class="pair"><figure><img class="ph" tabindex="0" loading="lazy" src="examples/68-street-before.jpg" alt="№68, ქუჩის ფასადი სამუშაოებამდე"></figure><figure><img class="ph" tabindex="0" loading="lazy" src="examples/68-street-after.jpg" alt="№68, ქუჩის ფასადი სამუშაოების შემდეგ"></figure></div>
@@ -214,7 +221,7 @@ article a{color:var(--green);text-decoration:underline;text-underline-offset:3px
     <div class="legend"><span><b style="background:var(--muted)"></b>მარცხნივ: სამუშაოებამდე</span><span><b style="background:var(--green)"></b>მარჯვნივ: სამუშაოების შემდეგ</span></div>
   </section>
 
-  <section class="stage wide">
+  <section class="stage wide" id="h70">
     <div class="stage-head"><span class="n">№70</span><h3>რუსთაველის ქუჩა №70</h3></div>
     <div class="cmp">
       <div class="pair"><figure><img class="ph" tabindex="0" loading="lazy" src="examples/70-street-before.jpg" alt="№70, ქუჩის ფასადი სამუშაოებამდე"></figure><figure><img class="ph" tabindex="0" loading="lazy" src="examples/70-street-after.jpg" alt="№70, ქუჩის ფასადი სამუშაოების შემდეგ"></figure></div>
