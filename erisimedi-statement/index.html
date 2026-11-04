@@ -122,6 +122,12 @@ html{scroll-behavior:smooth}
 article .docs-list a{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border:1px solid var(--line);border-radius:6px;background:var(--green-soft);color:var(--fg);text-decoration:none}
 article .docs-list a:hover{border-color:var(--green)}
 .docs-list a span{font-size:12px;font-weight:600;color:var(--green);letter-spacing:.05em}
+.doc-toggle{font:inherit;color:var(--green);background:var(--green-soft);border:1px solid var(--green);border-radius:4px;padding:0 6px;cursor:pointer;line-height:1.5}
+.doc-toggle::after{content:" ▾";font-size:.8em}
+.doc-toggle[aria-expanded="true"]::after{content:" ▴"}
+.doc-toggle:hover{background:var(--green);color:var(--bg)}
+.doc-toggle:focus-visible{outline:3px solid var(--green);outline-offset:2px}
+.docs-list{margin:-.4em 0 1.2em}
 </style>   
 </head>
 <body>
@@ -154,20 +160,12 @@ article .docs-list a:hover{border-color:var(--green)}
     <p>მიუხედავად აღნიშნული ობიექტური გარემოებებით გამოწვეული სირთულეებისა, ჩვენი კომპანიის, დამკვეთის წარმომადგენლებისა და თავად შენობების მესაკუთრეების გონივრული და კონსტრუქციული მიდგომების შედეგად, ვფიქრობთ, ერთობლივი ძალისხმევით შევძელით დასახული საპროექტო ამოცანის განხორციელება.</p>
     <p>აღნიშნული, უპირველეს ყოვლისა, გამოიხატა სარესტავრაციო შენობების ავთენტური ისტორიულ-არქიტექტურული იერსახის მაქსიმალურად აღდგენაში, იმგვარად, რომ გათვალისწინებული ყოფილიყო პროცესში მონაწილე ყველა დაინტერესებული მხარის, მათ შორის ადგილობრივი მაცხოვრებლების, ინტერესები.</p>
 
-    <p>ჩვენი განცხადების საილუსტრაციოდ გვსურს, საზოგადოებას წარვუდგინოთ რუსთაველის ქუჩაზე მდებარე შემდეგი შენობების ფოტომასალა:</p>
-    <ul class="houses-list">
-      <li><a href="#h68">რუსთაველის ქუჩა №68</a></li>
-      <li><a href="#h70">რუსთაველის ქუჩა №70</a></li>
-      <li><a href="#h76">რუსთაველის ქუჩა №76</a></li>
-    </ul>
-    <details class="docs">
-      <summary>საპროექტო დოკუმენტაცია</summary>
-      <div class="docs-list">
-        <a href="proekti-68.pdf" target="_blank">რუსთაველის ქუჩა №68 <span>PDF</span></a>
-        <a href="proekti-70.pdf" target="_blank">რუსთაველის ქუჩა №70 <span>PDF</span></a>
-        <a href="proekti.pdf" target="_blank">რუსთაველის ქუჩა №76 <span>PDF</span></a>
-      </div>
-    </details>
+    <p>ჩვენი განცხადების საილუსტრაციოდ გვსურს, საზოგადოებას წარვუდგინოთ რუსთაველის ქუჩის <a href="#h68">№68</a>, <a href="#h70">№70</a> და <a href="#h76">№76</a> შენობებთან დაკავშირებული, საჯაროდ ხელმისაწვდომი <button type="button" class="doc-toggle" aria-expanded="false" aria-controls="docs-list">საპროექტო</button> დოკუმენტაცია, რომელიც აღნიშნულ ობიექტებზე განსახორციელებელ სამუშაოებს ითვალისწინებდა.</p>
+    <div class="docs-list" id="docs-list" hidden>
+      <a href="proekti-68.pdf" target="_blank">რუსთაველის ქუჩა №68 <span>PDF</span></a>
+      <a href="proekti-70.pdf" target="_blank">რუსთაველის ქუჩა №70 <span>PDF</span></a>
+      <a href="proekti.pdf" target="_blank">რუსთაველის ქუჩა №76 <span>PDF</span></a>
+    </div>
     <h3 class="house-title" id="h76">რუსთაველის ქუჩა №76</h3>
     <p>ამასთანავე, წარმოვადგენთ შენობის სარეაბილიტაციო-სარესტავრაციო სამუშაოების დაწყებამდე, მისი კონსტრუქციული და არქიტექტურული ელემენტების გახსნამდე არსებული მდგომარეობის ამსახველ ფოტომასალას.</p>
   </article>
@@ -284,6 +282,10 @@ lb.querySelector('.lb-next').addEventListener('click',()=>show(cur+1));
 document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')closePic();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
 let x0=null;lb.addEventListener('touchstart',e=>{x0=e.touches[0].clientX},{passive:true});
 lb.addEventListener('touchend',e=>{if(x0===null)return;const dx=e.changedTouches[0].clientX-x0;if(Math.abs(dx)>50)show(cur+(dx<0?1:-1));x0=null});
+</script>
+<script>
+(function(){var t=document.querySelector('.doc-toggle'),l=document.getElementById('docs-list');if(!t||!l)return;
+t.addEventListener('click',function(){var o=l.hidden;l.hidden=!o;t.setAttribute('aria-expanded',o?'true':'false')});})();
 </script>
 </body>
 </html>
